@@ -15,7 +15,7 @@ class App extends Component {
   }
 
   render() {
-    const data = this.state;
+    const { data } = this.state;
 
     return (
       <div className={styles.container}>
