@@ -4,7 +4,7 @@ import CountUp from "react-countup";
 
 import styles from "./Cards.module.css";
 
-const Cards = ({ data: { confirmed, recovered, deaths } }) => {
+const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
   if (!confirmed) {
     return "Loading...";
   }
@@ -25,7 +25,9 @@ const Cards = ({ data: { confirmed, recovered, deaths } }) => {
                 separator=","
               ></CountUp>
             </Typography>
-            <Typography color="textSecondary">Date Placeholder</Typography>
+            <Typography color="textSecondary">
+              {new Date(lastUpdate).toDateString()}
+            </Typography>
             <Typography variant="body2">
               Number of active cases of COVID-19
             </Typography>
@@ -45,7 +47,9 @@ const Cards = ({ data: { confirmed, recovered, deaths } }) => {
                 separator=","
               ></CountUp>
             </Typography>
-            <Typography color="textSecondary">Date Placeholder</Typography>
+            <Typography color="textSecondary">
+              {new Date(lastUpdate).toDateString()}
+            </Typography>
             <Typography variant="body2">
               Number of active cases of COVID-19
             </Typography>
@@ -65,7 +69,9 @@ const Cards = ({ data: { confirmed, recovered, deaths } }) => {
                 separator=","
               ></CountUp>
             </Typography>
-            <Typography color="textSecondary">Date Placeholder</Typography>
+            <Typography color="textSecondary">
+              {new Date(lastUpdate).toDateString()}
+            </Typography>
             <Typography variant="body2">
               Number of active cases of COVID-19
             </Typography>
